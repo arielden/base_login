@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+  <div class="wrapper">
+    <div class="title"><span>{{the_title}}</span></div>
+    <form>
+      <!-- <div class="row">
+        <p>Probando con algún texto</p>
+      </div>
+      <div class="row">
+        <p>Probando con otro texto</p>
+      </div> -->
+      <table>
+        <tr><td>User:</td><td>{{ user_name }}</td></tr>
+        <tr><td>Role:</td><td>{{ role }}</td></tr>
+      </table>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}
