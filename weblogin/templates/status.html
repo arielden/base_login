@@ -5,12 +5,16 @@
   <div class="wrapper">
     <div class="title"><span>{{the_title}}</span></div>
     <form>
-      <!-- <div class="row">
-        <p>Probando con algún texto</p>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {% with messages = get_flashed_messages(with_categories = true ) %}
+          {% if messages %}
+            {% for cat, msg in messages %}
+              <strong>{{ cat }}: </strong>{{ msg }}
+            {% endfor %}
+          {%  endif%}
+        {% endwith %}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
-      <div class="row">
-        <p>Probando con otro texto</p>
-      </div> -->
       <table>
         <tr><td>User:</td><td>{{ user_name }}</td></tr>
         <tr><td>Role:</td><td>{{ role }}</td></tr>
